@@ -86,7 +86,32 @@ Software-Testing-Portfolio/
 
 ---
 
-## 5. How to Run the Automated Tests
+## 5. Results at a Glance
+
+| | Cycle 1 | Cycle 2 (retest + regression) |
+|---|:---:|:---:|
+| Test cases executed | 68 | 68 |
+| Passed | 61 | **68** |
+| Failed | 7 | **0** |
+| Pass rate | 89.7 % | **100 %** |
+| Defects found / open | 5 / 5 | 5 / **0** |
+
+| Deliverable | Link |
+|-------------|------|
+| Test plan | [01_Test_Plan/Test_Plan.md](01_Test_Plan/Test_Plan.md) |
+| Test case design (EP, BVA, DT, ST) + RTM | [02_Test_Case_Design](02_Test_Case_Design/README.md) |
+| Test execution logs | [Cycle 1](03_Test_Execution/Test_Execution_Log_Cycle1.md) · [Cycle 2](03_Test_Execution/Test_Execution_Log_Cycle2.md) |
+| Defect reports | [04_Defect_Reports/Defect_Log.md](04_Defect_Reports/Defect_Log.md) |
+| JUnit 5 automation | [05_Test_Automation](05_Test_Automation/README.md) |
+| Test execution summary report | [06_Test_Reports/Test_Execution_Summary.md](06_Test_Reports/Test_Execution_Summary.md) |
+| Screenshots | [07_Screenshots](07_Screenshots/README.md) |
+| Conclusion | [Conclusion.md](Conclusion.md) |
+
+![Cycle 2 report](07_Screenshots/03_Cycle2_HTML_Report.png)
+
+---
+
+## 6. How to Run the Automated Tests
 
 **Prerequisite:** JDK 17 or newer (`javac -version`). No Maven/Gradle needed — the JUnit console
 launcher jar is included in `05_Test_Automation/lib`.
