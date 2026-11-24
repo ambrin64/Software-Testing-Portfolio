@@ -12,7 +12,9 @@ and the **JUnit 5 automated test suite** that executes all 68 designed test case
 │   ├── auth/                       AuthService, LoginResult
 │   ├── exam/                       ExamSession, ExamState, Question, TimeSource
 │   ├── result/                     ResultCalculator, ResultStatus
+│   ├── web/                        WebServer, QuestionBank, Json (web front end)
 │   └── Main.java                   console demo
+├── src/main/resources/web/         ← web UI: index.html, styles.css, app.js
 ├── src/test/java/com/oes/          ← JUnit 5 test suite (68 tests)
 │   ├── registration/RegistrationEquivalencePartitioningTest.java   (8)
 │   ├── registration/RegistrationBoundaryValueTest.java             (14)
@@ -32,10 +34,32 @@ and the **JUnit 5 automated test suite** that executes all 68 designed test case
 ```powershell
 .\run_tests.ps1                                   # compile + run all tests
 .\run_tests.ps1 -Demo                             # run the console demo
+.\run_tests.ps1 -Web                              # start the web UI at http://localhost:8080/
+.\run_tests.ps1 -Web -ExamSeconds 60              # web UI with a 1-minute exam (to show time-out)
 python tools\junit_xml_to_html.py out\reports\TEST-junit-jupiter.xml report.html   # HTML report
 ```
 
 Requires **JDK 17+**. Maven and Gradle are not needed.
+
+## Web front end
+
+`.\run_tests.ps1 -Web` starts a small web server (Java's built-in `com.sun.net.httpserver`, no extra
+libraries) and opens the browser. Sign in with the demo account **demo@oes.edu / Exam2026** or register
+a new student. Press `Ctrl+C` in the terminal to stop it.
+
+The web layer (`com.oes.web`) contains **no business rules**. It only passes requests on to the same
+classes that the 68 JUnit tests verify, so what you see in the browser is the tested behaviour:
+
+| Screen | Behaviour shown | Class used | Related test cases |
+|--------|-----------------|------------|--------------------|
+| Register | Name / e-mail / age / password validation, duplicate e-mail (the returned status code is shown) | `RegistrationService` | TC_REG_EP_*, TC_REG_BVA_* |
+| Sign in | Attempts left, lock after 3 failures, admin unlock | `AuthService` | TC_LGN_ST_* |
+| Exam | Timer, change answer, answers locked after submit, automatic time-out | `ExamSession` | TC_EXM_ST_* |
+| Result | +4 / −1 scoring, grade bands, PASS / FAIL / WITHHELD with the reason | `ResultCalculator` | TC_SCR_EP_*, TC_GRD_BVA_*, TC_RES_DT_* |
+
+Leaving the exam window (switching tab or minimising) is recorded as an integrity warning. After 3
+warnings the attempt is flagged as malpractice, so the result is **WITHHELD** whatever the marks
+(decision table rules R7/R8, defect DEF-005). The correct answers are never sent to the browser.
 
 ## JUnit 5 features used
 

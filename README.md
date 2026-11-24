@@ -46,6 +46,9 @@ The Online Examination System lets students register, log in, take a timed multi
 and receive their score, grade and result. A compact Java implementation of the system's core
 business logic is included in [`05_Test_Automation/src/main`](05_Test_Automation/src/main/java/com/oes)
 so that every test case in this portfolio is **actually executed** against real code.
+A **web front end** (register → sign in → timed exam → result) runs on top of the same tested classes.
+
+![Web UI: exam screen](07_Screenshots/09_Web_Exam.png)
 
 ### 3.2 Modules and functionalities tested
 
@@ -64,6 +67,7 @@ so that every test case in this portfolio is **actually executed** against real 
 | Language of the application under test | Java 21 |
 | Unit / automation testing framework | JUnit 5 (Jupiter 5.11, console launcher) |
 | Version control & portfolio hosting | Git + GitHub |
+| Web front end | HTML, CSS, JavaScript + Java built-in HTTP server (no extra libraries) |
 | Diagrams | Mermaid (rendered natively by GitHub) |
 | HTML test report | Python 3 script (`05_Test_Automation/tools/junit_xml_to_html.py`) |
 
@@ -128,4 +132,10 @@ cd 05_Test_Automation
 ./run_tests.sh
 ```
 
-To run the demo application itself: `.\run_tests.ps1 -Demo` (or `./run_tests.sh --demo`).
+To run the application itself:
+
+| Command (PowerShell) | Git Bash equivalent | What it does |
+|----------------------|---------------------|--------------|
+| `.\run_tests.ps1 -Web` | `./run_tests.sh --web` | Starts the **web UI** at http://localhost:8080/ (demo login `demo@oes.edu` / `Exam2026`) |
+| `.\run_tests.ps1 -Web -ExamSeconds 60` | `EXAM_SECONDS=60 ./run_tests.sh --web` | Same, with a 1-minute exam to show the automatic time-out |
+| `.\run_tests.ps1 -Demo` | `./run_tests.sh --demo` | Console demo of the full flow |

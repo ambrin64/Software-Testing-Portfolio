@@ -36,9 +36,10 @@ life cycle from start to finish:
 
 ## Limitations and future work
 
-- Only functional, unit-level testing of business logic was performed. Future work could add
-  **Selenium** UI tests for a web front end, **Postman** API tests, and **mutation testing** (e.g. PIT)
-  to measure how strong the test suite is.
+- Only functional, unit-level testing of business logic was performed. A web front end was added
+  afterwards for demonstration. It reuses the tested classes, but the UI itself was not tested.
+  Future work could add **Selenium** UI tests for it, **Postman** tests for its REST API, and
+  **mutation testing** (e.g. PIT) to measure how strong the test suite is.
 - Non-functional testing (performance under many simultaneous exam takers, security of answer
   submission) is out of scope and recommended for a later phase.
 
