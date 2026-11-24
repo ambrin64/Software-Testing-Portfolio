@@ -1,0 +1,11 @@
+# Compiled output
+05_Test_Automation/out/
+*.class
+
+# IDE / OS files
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+__pycache__/

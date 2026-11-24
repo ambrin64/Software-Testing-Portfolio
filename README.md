@@ -1,0 +1,106 @@
+# Software Testing Portfolio — Online Examination System
+
+> A GitHub-based portfolio documenting the complete software testing life cycle
+> (planning → design → execution → defect management → automation → reporting)
+> carried out on an **Online Examination System (OES)**.
+
+---
+
+## 1. Student / Team Details
+
+| # | Name | Roll / Register No. | Role in Team |
+|---|------|---------------------|--------------|
+| 1 | Ambrin _(edit surname)_ | _[Roll No.]_ | Test Lead / Automation |
+| 2 | _[Team member 2]_ | _[Roll No.]_ | Test Designer |
+| 3 | _[Team member 3]_ | _[Roll No.]_ | Test Executor |
+| 4 | _[Team member 4]_ | _[Roll No.]_ | Defect & Report Manager |
+
+| Field | Details |
+|-------|---------|
+| **Subject** | Software Testing |
+| **Course / Semester** | _[e.g. B.E. CSE — Semester V]_ |
+| **Institution** | _[College name]_ |
+| **Faculty In-charge** | _[Faculty name]_ |
+| **Component** | Online Portfolio using GitHub Activity (20 marks) |
+
+---
+
+## 2. Objectives
+
+1. Understand an application's requirements and identify the modules and functionalities to be tested.
+2. Prepare a structured **test plan** (scope, approach, resources, schedule, entry/exit criteria, risks).
+3. Design test cases using black-box techniques — **Equivalence Partitioning, Boundary Value Analysis,
+   Decision Tables and State Transition testing**.
+4. **Execute** the test cases, record actual results and compare them with expected results.
+5. **Identify, document and track defects** through their life cycle (New → Fixed → Retested → Closed).
+6. **Automate** the test cases using **JUnit 5**.
+7. Prepare a **test execution summary report** and maintain the work in GitHub with meaningful commits.
+
+---
+
+## 3. Project Description
+
+### 3.1 Application under test — Online Examination System
+
+The Online Examination System lets students register, log in, take a timed multiple-choice exam,
+and receive their score, grade and result. A compact Java implementation of the system's core
+business logic is included in [`05_Test_Automation/src/main`](05_Test_Automation/src/main/java/com/oes)
+so that every test case in this portfolio is **actually executed** against real code.
+
+### 3.2 Modules and functionalities tested
+
+| Module | ID | Functionalities tested | Technique(s) applied |
+|--------|----|------------------------|----------------------|
+| Student Registration | REG | Name, e-mail, age and password validation; duplicate e-mail check | Equivalence Partitioning, BVA |
+| Login / Authentication | LGN | Credential check, failed-attempt counter, account lock after 3 failures, admin unlock | State Transition |
+| Exam Session | EXM | Start, answer, change answer, submit, auto time-out, invalid operations | State Transition, EP |
+| Score Calculation | SCR | +4 per correct answer, −1 negative marking, floor at 0, percentage, section coverage | Equivalence Partitioning |
+| Grade & Result | GRD / RES | Percentage → grade bands; PASS / FAIL / WITHHELD decision | BVA, Decision Table |
+
+### 3.3 Tools & technologies
+
+| Purpose | Tool |
+|---------|------|
+| Language of the application under test | Java 21 |
+| Unit / automation testing framework | JUnit 5 (Jupiter 5.11, console launcher) |
+| Version control & portfolio hosting | Git + GitHub |
+| Diagrams | Mermaid (rendered natively by GitHub) |
+| HTML test report | Python 3 script (`05_Test_Automation/tools/junit_xml_to_html.py`) |
+
+---
+
+## 4. Repository Structure
+
+```
+Software-Testing-Portfolio/
+├── README.md                     ← you are here
+├── 01_Test_Plan/                 ← IEEE-829 style test plan
+├── 02_Test_Case_Design/          ← EP, BVA, Decision Table, State Transition + master test case list
+├── 03_Test_Execution/            ← execution logs with actual results (Cycle 1 & Cycle 2)
+├── 04_Defect_Reports/            ← defect log + individual defect reports
+├── 05_Test_Automation/           ← application source, JUnit 5 test suite, run scripts
+├── 06_Test_Reports/              ← test execution summary, JUnit XML & HTML reports
+├── 07_Screenshots/               ← screenshots of executions and reports
+└── Conclusion.md                 ← learnings and conclusion
+```
+
+---
+
+## 5. How to Run the Automated Tests
+
+**Prerequisite:** JDK 17 or newer (`javac -version`). No Maven/Gradle needed — the JUnit console
+launcher jar is included in `05_Test_Automation/lib`.
+
+```powershell
+# Windows (PowerShell)
+cd 05_Test_Automation
+.\run_tests.ps1
+```
+
+```bash
+# Linux / macOS / Git Bash
+cd 05_Test_Automation
+./run_tests.sh
+```
+
+To run the demo application itself: `.\run_tests.ps1 -Demo` (or `./run_tests.sh --demo`).
