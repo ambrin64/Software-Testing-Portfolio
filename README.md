@@ -8,12 +8,12 @@
 
 ## 1. Student / Team Details
 
-| # | Name | Roll / Register No. | Role in Team |
-|---|------|---------------------|--------------|
-| 1 | Ambrin _(edit surname)_ | _[Roll No.]_ | Test Lead / Automation |
-| 2 | _[Team member 2]_ | _[Roll No.]_ | Test Designer |
-| 3 | _[Team member 3]_ | _[Roll No.]_ | Test Executor |
-| 4 | _[Team member 4]_ | _[Roll No.]_ | Defect & Report Manager |
+| # | Name | USN | Role in Team |
+|---|------|-----|--------------|
+| 1 | Ambrin RK | 1MS23IS011 | Test Lead / Automation |
+| 2 | Aryan Raj | 1MS23IS022 | Test Designer |
+| 3 | BR Neha | 1MS23IS025 | Test Executor |
+| 4 | Daksh Malik | 1MS23IS036 | Defect & Report Manager |
 
 | Field | Details |
 |-------|---------|

@@ -4,7 +4,7 @@
 |-------|-------|
 | Test Plan ID | TP-OES-01 |
 | Version | 1.0 |
-| Prepared by | Software Testing Portfolio Team |
+| Prepared by | Ambrin RK (1MS23IS011), Aryan Raj (1MS23IS022), BR Neha (1MS23IS025), Daksh Malik (1MS23IS036) |
 | Standard followed | IEEE 829 (adapted) |
 
 ---
@@ -102,12 +102,12 @@ scope, approach, resources, schedule and criteria for testing the core functiona
 
 ## 10. Roles and Responsibilities
 
-| Role | Responsibility |
-|------|----------------|
-| Test Lead | Test plan, review, GitHub repository maintenance |
-| Test Designer | Test case design using EP, BVA, decision table, state transition |
-| Test Executor / Automation | JUnit automation, test execution, recording actual results |
-| Defect & Report Manager | Defect logging, tracking, retesting, summary report |
+| Role | Member | Responsibility |
+|------|--------|----------------|
+| Test Lead / Automation | Ambrin RK | Test plan, review, JUnit automation, GitHub repository maintenance |
+| Test Designer | Aryan Raj | Test case design using EP, BVA, decision table, state transition |
+| Test Executor | BR Neha | Test execution, recording actual results |
+| Defect & Report Manager | Daksh Malik | Defect logging, tracking, retesting, summary report |
 
 ## 11. Schedule
 
@@ -141,5 +141,5 @@ scope, approach, resources, schedule and criteria for testing the core functiona
 
 | Name | Role | Signature / Date |
 |------|------|------------------|
-| | Test Lead | |
+| Ambrin RK | Test Lead | |
 | | Faculty In-charge | |
