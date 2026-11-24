@@ -9,7 +9,7 @@
 | Detected in | Test Cycle 1, build `974dd41` |
 | Severity | Medium |
 | Priority | High |
-| Status | **Open** |
+| Status | **Closed** |
 | Environment | Windows 11, JDK 21.0.11, JUnit 5.11 |
 
 ## Steps to reproduce
@@ -34,3 +34,13 @@ Equivalence partitioning with a mid-range value (e.g. 35) would **not** have fou
 ## Evidence
 - [Cycle 1 console output](../03_Test_Execution/Cycle1_Results/console_output.txt)
 - [Cycle 1 HTML report](../03_Test_Execution/Cycle1_Results/Cycle1_Report.html)
+
+## Resolution
+
+| Field | Value |
+|-------|-------|
+| Fix | `RegistrationService.register()` used `age >= MAX_AGE`; changed to `age > MAX_AGE` so 60 is inclusive. |
+| Fixed in | Commit `0632372` |
+| Retested with | TC_REG_BVA_05 (plus regression TC_REG_BVA_01–06) |
+| Retest result | ✅ PASS in Cycle 2 ([log](../03_Test_Execution/Test_Execution_Log_Cycle2.md)) |
+| Final status | Closed |

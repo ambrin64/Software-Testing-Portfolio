@@ -9,7 +9,7 @@
 | Detected in | Test Cycle 1, build `974dd41` |
 | Severity | **Critical** |
 | Priority | High |
-| Status | **Open** |
+| Status | **Closed** |
 | Environment | Windows 11, JDK 21.0.11, JUnit 5.11 |
 
 ## Steps to reproduce
@@ -38,3 +38,13 @@ this test case.
 ## Evidence
 - [Cycle 1 console output](../03_Test_Execution/Cycle1_Results/console_output.txt)
 - [Cycle 1 HTML report](../03_Test_Execution/Cycle1_Results/Cycle1_Report.html)
+
+## Resolution
+
+| Field | Value |
+|-------|-------|
+| Fix | `ExamSession.answer()` now accepts answers only in the `IN_PROGRESS` state (`state != IN_PROGRESS` → exception). |
+| Fixed in | Commit `0632372` |
+| Retested with | TC_EXM_ST_06 (plus regression TC_EXM_ST_01–12) |
+| Retest result | ✅ PASS in Cycle 2 ([log](../03_Test_Execution/Test_Execution_Log_Cycle2.md)) |
+| Final status | Closed |

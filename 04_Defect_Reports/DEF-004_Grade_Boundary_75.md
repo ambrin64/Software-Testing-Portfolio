@@ -9,7 +9,7 @@
 | Detected in | Test Cycle 1, build `974dd41` |
 | Severity | High |
 | Priority | High |
-| Status | **Open** |
+| Status | **Closed** |
 | Environment | Windows 11, JDK 21.0.11, JUnit 5.11 |
 
 ## Steps to reproduce
@@ -33,3 +33,13 @@ Students scoring exactly 75 % receive a lower grade, which directly affects thei
 ## Evidence
 - [Cycle 1 console output](../03_Test_Execution/Cycle1_Results/console_output.txt)
 - [Cycle 1 HTML report](../03_Test_Execution/Cycle1_Results/Cycle1_Report.html)
+
+## Resolution
+
+| Field | Value |
+|-------|-------|
+| Fix | `ResultCalculator.grade()` used `percentage > 75`; changed to `percentage >= 75`. |
+| Fixed in | Commit `0632372` |
+| Retested with | TC_GRD_BVA_08 (plus regression TC_GRD_BVA_01–12) |
+| Retest result | ✅ PASS in Cycle 2 ([log](../03_Test_Execution/Test_Execution_Log_Cycle2.md)) |
+| Final status | Closed |

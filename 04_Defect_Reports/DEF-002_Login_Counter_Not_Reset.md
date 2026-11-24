@@ -9,7 +9,7 @@
 | Detected in | Test Cycle 1, build `974dd41` |
 | Severity | High |
 | Priority | High |
-| Status | **Open** |
+| Status | **Closed** |
 | Environment | Windows 11, JDK 21.0.11, JUnit 5.11 |
 
 ## Steps to reproduce
@@ -41,3 +41,13 @@ success state exposes it, which is why state transition testing found it.
 ## Evidence
 - [Cycle 1 console output](../03_Test_Execution/Cycle1_Results/console_output.txt)
 - [Cycle 1 HTML report](../03_Test_Execution/Cycle1_Results/Cycle1_Report.html)
+
+## Resolution
+
+| Field | Value |
+|-------|-------|
+| Fix | `AuthService.login()` now sets `failedAttempts = 0` on a successful login. |
+| Fixed in | Commit `0632372` |
+| Retested with | TC_LGN_ST_05, TC_LGN_ST_06 (plus regression TC_LGN_ST_01–08) |
+| Retest result | ✅ PASS in Cycle 2 ([log](../03_Test_Execution/Test_Execution_Log_Cycle2.md)) |
+| Final status | Closed |

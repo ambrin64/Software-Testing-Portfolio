@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Test Execution Report - Cycle 2 (Retest &amp; Regression)</title>
+<style>
+ body { font-family: Segoe UI, Arial, sans-serif; margin: 32px; color: #1f2328; }
+ h1 { margin-bottom: 4px; } .sub { color: #59636e; margin-top: 0; }
+ .cards { display: flex; gap: 16px; margin: 20px 0; }
+ .card { border: 1px solid #d1d9e0; border-radius: 8px; padding: 12px 20px; min-width: 120px; }
+ .card b { display: block; font-size: 28px; }
+ .ok b { color: #1a7f37; } .bad b { color: #cf222e; }
+ .bar { height: 14px; background: #ffebe9; border-radius: 7px; overflow: hidden; margin-bottom: 24px; }
+ .bar div { height: 100%; background: #2da44e; width: 100.0%; }
+ table { border-collapse: collapse; width: 100%; font-size: 13px; }
+ th, td { border: 1px solid #d1d9e0; padding: 6px 8px; text-align: left; vertical-align: top; }
+ th { background: #f6f8fa; }
+ tr.fail td { background: #ffebe9; } td.st { font-weight: 600; }
+ tr.pass td.st { color: #1a7f37; } tr.fail td.st { color: #cf222e; }
+</style></head><body>
+<h1>Test Execution Report - Cycle 2 (Retest &amp; Regression)</h1>
+<p class="sub">Online Examination System &middot; JUnit 5 &middot; executed 2026-11-24T18:28:18</p>
+<div class="cards">
+ <div class="card"><b>68</b>Total</div>
+ <div class="card ok"><b>68</b>Passed</div>
+ <div class="card bad"><b>0</b>Failed</div>
+ <div class="card"><b>100.0%</b>Pass rate</div>
+</div>
+<div class="bar"><div></div></div>
+<table><tr><th>#</th><th>Test Case ID</th><th>Description</th><th>Expected</th><th>Actual</th><th>Status</th></tr>
+<tr class='pass'><td>1</td><td><code>TC_EXM_ST_01</code></td><td>new session -&gt; NOT_STARTED</td><td>NOT_STARTED</td><td>NOT_STARTED</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>2</td><td><code>TC_EXM_ST_02</code></td><td>NOT_STARTED + start() -&gt; IN_PROGRESS</td><td>IN_PROGRESS</td><td>IN_PROGRESS</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>3</td><td><code>TC_EXM_ST_03</code></td><td>NOT_STARTED + answer() -&gt; IllegalStateException</td><td>IllegalStateException</td><td>IllegalStateException</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>4</td><td><code>TC_EXM_ST_04</code></td><td>NOT_STARTED + submit() -&gt; IllegalStateException</td><td>IllegalStateException</td><td>IllegalStateException</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>5</td><td><code>TC_EXM_ST_05</code></td><td>IN_PROGRESS + submit() -&gt; SUBMITTED</td><td>SUBMITTED</td><td>SUBMITTED</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>6</td><td><code>TC_EXM_ST_06</code></td><td>SUBMITTED + answer() -&gt; IllegalStateException, answers unchanged</td><td>IllegalStateException, answers unchanged</td><td>IllegalStateException, answers unchanged</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>7</td><td><code>TC_EXM_ST_07</code></td><td>IN_PROGRESS + duration elapsed -&gt; TIMED_OUT</td><td>TIMED_OUT</td><td>TIMED_OUT</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>8</td><td><code>TC_EXM_ST_08</code></td><td>TIMED_OUT + answer() -&gt; IllegalStateException</td><td>IllegalStateException</td><td>IllegalStateException</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>9</td><td><code>TC_EXM_ST_09</code></td><td>IN_PROGRESS + start() again -&gt; IllegalStateException</td><td>IllegalStateException</td><td>IllegalStateException</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>10</td><td><code>TC_EXM_ST_10</code></td><td>TIMED_OUT + submit() -&gt; IllegalStateException</td><td>IllegalStateException</td><td>IllegalStateException</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>11</td><td><code>TC_EXM_ST_11</code></td><td>IN_PROGRESS + answer() with invalid option -&gt; IllegalArgumentException</td><td>IllegalArgumentException</td><td>IllegalArgumentException</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>12</td><td><code>TC_EXM_ST_12</code></td><td>IN_PROGRESS + change answer -&gt; last answer saved</td><td>last answer saved</td><td>last answer saved</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>13</td><td><code>TC_GRD_BVA_01</code></td><td>-1 % -&gt; IllegalArgumentException</td><td>IllegalArgumentException</td><td>IllegalArgumentException</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>14</td><td><code>TC_GRD_BVA_02</code></td><td>0 % -&gt; F</td><td>F</td><td>F</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>15</td><td><code>TC_GRD_BVA_03</code></td><td>39 % -&gt; F</td><td>F</td><td>F</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>16</td><td><code>TC_GRD_BVA_04</code></td><td>40 % -&gt; C</td><td>C</td><td>C</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>17</td><td><code>TC_GRD_BVA_05</code></td><td>59 % -&gt; C</td><td>C</td><td>C</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>18</td><td><code>TC_GRD_BVA_06</code></td><td>60 % -&gt; B</td><td>B</td><td>B</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>19</td><td><code>TC_GRD_BVA_07</code></td><td>74 % -&gt; B</td><td>B</td><td>B</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>20</td><td><code>TC_GRD_BVA_08</code></td><td>75 % -&gt; A</td><td>A</td><td>A</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>21</td><td><code>TC_GRD_BVA_09</code></td><td>89 % -&gt; A</td><td>A</td><td>A</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>22</td><td><code>TC_GRD_BVA_10</code></td><td>90 % -&gt; A+</td><td>A+</td><td>A+</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>23</td><td><code>TC_GRD_BVA_11</code></td><td>100 % -&gt; A+</td><td>A+</td><td>A+</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>24</td><td><code>TC_GRD_BVA_12</code></td><td>101 % -&gt; IllegalArgumentException</td><td>IllegalArgumentException</td><td>IllegalArgumentException</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>25</td><td><code>TC_LGN_ST_01</code></td><td>S0 + valid password -&gt; SUCCESS, stays S0</td><td>SUCCESS, stays S0</td><td>SUCCESS, stays S0</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>26</td><td><code>TC_LGN_ST_02</code></td><td>S0 + invalid password -&gt; INVALID_CREDENTIALS, S1</td><td>INVALID_CREDENTIALS, S1</td><td>INVALID_CREDENTIALS, S1</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>27</td><td><code>TC_LGN_ST_03</code></td><td>three invalid passwords -&gt; ACCOUNT_LOCKED, S3</td><td>ACCOUNT_LOCKED, S3</td><td>ACCOUNT_LOCKED, S3</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>28</td><td><code>TC_LGN_ST_04</code></td><td>S3 (locked) + valid password -&gt; ACCOUNT_LOCKED</td><td>ACCOUNT_LOCKED</td><td>ACCOUNT_LOCKED</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>29</td><td><code>TC_LGN_ST_05</code></td><td>S2 + valid password -&gt; SUCCESS and counter reset to 0</td><td>SUCCESS and counter reset to 0</td><td>SUCCESS and counter reset to 0</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>30</td><td><code>TC_LGN_ST_06</code></td><td>invalid, valid, invalid, invalid -&gt; INVALID_CREDENTIALS, not locked</td><td>INVALID_CREDENTIALS, not locked</td><td>INVALID_CREDENTIALS, not locked</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>31</td><td><code>TC_LGN_ST_07</code></td><td>S3 + admin unlock + valid password -&gt; SUCCESS</td><td>SUCCESS</td><td>SUCCESS</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>32</td><td><code>TC_LGN_ST_08</code></td><td>unregistered user -&gt; USER_NOT_FOUND</td><td>USER_NOT_FOUND</td><td>USER_NOT_FOUND</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>33</td><td><code>TC_REG_BVA_01</code></td><td>age 15 -&gt; INVALID_AGE</td><td>INVALID_AGE</td><td>INVALID_AGE</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>34</td><td><code>TC_REG_BVA_02</code></td><td>age 16 -&gt; SUCCESS</td><td>SUCCESS</td><td>SUCCESS</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>35</td><td><code>TC_REG_BVA_03</code></td><td>age 17 -&gt; SUCCESS</td><td>SUCCESS</td><td>SUCCESS</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>36</td><td><code>TC_REG_BVA_04</code></td><td>age 59 -&gt; SUCCESS</td><td>SUCCESS</td><td>SUCCESS</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>37</td><td><code>TC_REG_BVA_05</code></td><td>age 60 -&gt; SUCCESS</td><td>SUCCESS</td><td>SUCCESS</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>38</td><td><code>TC_REG_BVA_06</code></td><td>age 61 -&gt; INVALID_AGE</td><td>INVALID_AGE</td><td>INVALID_AGE</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>39</td><td><code>TC_REG_BVA_07</code></td><td>password &#x27;Exam202&#x27; (length 7) -&gt; INVALID_PASSWORD</td><td>INVALID_PASSWORD</td><td>INVALID_PASSWORD</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>40</td><td><code>TC_REG_BVA_08</code></td><td>password &#x27;Exam2026&#x27; (length 8) -&gt; SUCCESS</td><td>SUCCESS</td><td>SUCCESS</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>41</td><td><code>TC_REG_BVA_09</code></td><td>password &#x27;Exam2026Exam2026&#x27; (length 16) -&gt; SUCCESS</td><td>SUCCESS</td><td>SUCCESS</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>42</td><td><code>TC_REG_BVA_10</code></td><td>password &#x27;Exam2026Exam20261&#x27; (length 17) -&gt; INVALID_PASSWORD</td><td>INVALID_PASSWORD</td><td>INVALID_PASSWORD</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>43</td><td><code>TC_REG_BVA_11</code></td><td>name of length 2 -&gt; INVALID_NAME</td><td>INVALID_NAME</td><td>INVALID_NAME</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>44</td><td><code>TC_REG_BVA_12</code></td><td>name of length 3 -&gt; SUCCESS</td><td>SUCCESS</td><td>SUCCESS</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>45</td><td><code>TC_REG_BVA_13</code></td><td>name of length 30 -&gt; SUCCESS</td><td>SUCCESS</td><td>SUCCESS</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>46</td><td><code>TC_REG_BVA_14</code></td><td>name of length 31 -&gt; INVALID_NAME</td><td>INVALID_NAME</td><td>INVALID_NAME</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>47</td><td><code>TC_REG_EP_01</code></td><td>all inputs valid -&gt; SUCCESS</td><td>SUCCESS</td><td>SUCCESS</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>48</td><td><code>TC_REG_EP_02</code></td><td>e-mail without &#x27;@&#x27; -&gt; INVALID_EMAIL</td><td>INVALID_EMAIL</td><td>INVALID_EMAIL</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>49</td><td><code>TC_REG_EP_03</code></td><td>e-mail without domain -&gt; INVALID_EMAIL</td><td>INVALID_EMAIL</td><td>INVALID_EMAIL</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>50</td><td><code>TC_REG_EP_04</code></td><td>empty name -&gt; INVALID_NAME</td><td>INVALID_NAME</td><td>INVALID_NAME</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>51</td><td><code>TC_REG_EP_05</code></td><td>password without digit -&gt; INVALID_PASSWORD</td><td>INVALID_PASSWORD</td><td>INVALID_PASSWORD</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>52</td><td><code>TC_REG_EP_06</code></td><td>password without uppercase -&gt; INVALID_PASSWORD</td><td>INVALID_PASSWORD</td><td>INVALID_PASSWORD</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>53</td><td><code>TC_REG_EP_07</code></td><td>already registered e-mail -&gt; DUPLICATE_EMAIL</td><td>DUPLICATE_EMAIL</td><td>DUPLICATE_EMAIL</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>54</td><td><code>TC_REG_EP_08</code></td><td>null e-mail -&gt; INVALID_EMAIL</td><td>INVALID_EMAIL</td><td>INVALID_EMAIL</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>55</td><td><code>TC_RES_DT_01</code></td><td>(R1): 65 %, malpractice=false, allSections=true -&gt; PASS</td><td>PASS</td><td>PASS</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>56</td><td><code>TC_RES_DT_02</code></td><td>(R2): 65 %, malpractice=false, allSections=false -&gt; FAIL</td><td>FAIL</td><td>FAIL</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>57</td><td><code>TC_RES_DT_03</code></td><td>(R3): 65 %, malpractice=true, allSections=true -&gt; WITHHELD</td><td>WITHHELD</td><td>WITHHELD</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>58</td><td><code>TC_RES_DT_04</code></td><td>(R4): 65 %, malpractice=true, allSections=false -&gt; WITHHELD</td><td>WITHHELD</td><td>WITHHELD</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>59</td><td><code>TC_RES_DT_05</code></td><td>(R5): 30 %, malpractice=false, allSections=true -&gt; FAIL</td><td>FAIL</td><td>FAIL</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>60</td><td><code>TC_RES_DT_06</code></td><td>(R6): 30 %, malpractice=false, allSections=false -&gt; FAIL</td><td>FAIL</td><td>FAIL</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>61</td><td><code>TC_RES_DT_07</code></td><td>(R7): 30 %, malpractice=true, allSections=true -&gt; WITHHELD</td><td>WITHHELD</td><td>WITHHELD</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>62</td><td><code>TC_RES_DT_08</code></td><td>(R8): 30 %, malpractice=true, allSections=false -&gt; WITHHELD</td><td>WITHHELD</td><td>WITHHELD</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>63</td><td><code>TC_SCR_EP_01</code></td><td>all answers correct -&gt; 20</td><td>20</td><td>20</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>64</td><td><code>TC_SCR_EP_02</code></td><td>all answers wrong -&gt; 0 (never negative)</td><td>0 (never negative)</td><td>0 (never negative)</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>65</td><td><code>TC_SCR_EP_03</code></td><td>3 correct, 1 wrong, 1 unanswered -&gt; 11</td><td>11</td><td>11</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>66</td><td><code>TC_SCR_EP_04</code></td><td>no answers -&gt; 0</td><td>0</td><td>0</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>67</td><td><code>TC_SCR_EP_05</code></td><td>score 11 of 20 -&gt; 55.0 %</td><td>55.0 %</td><td>55.0 %</td><td class='st'>PASS</td></tr>
+<tr class='pass'><td>68</td><td><code>TC_SCR_EP_06</code></td><td>section B unanswered -&gt; allSectionsAttempted = false</td><td>allSectionsAttempted = false</td><td>allSectionsAttempted = false</td><td class='st'>PASS</td></tr>
+</table></body></html>
