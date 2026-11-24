@@ -142,4 +142,4 @@ scope, approach, resources, schedule and criteria for testing the core functiona
 | Name | Role | Signature / Date |
 |------|------|------------------|
 | Ambrin RK | Test Lead | |
-| | Faculty In-charge | |
+| Kavya Kasetty | Faculty In-charge | |

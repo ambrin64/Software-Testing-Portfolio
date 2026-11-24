@@ -18,9 +18,9 @@
 | Field | Details |
 |-------|---------|
 | **Subject** | Software Testing |
-| **Course / Semester** | _[e.g. B.E. CSE — Semester V]_ |
-| **Institution** | _[College name]_ |
-| **Faculty In-charge** | _[Faculty name]_ |
+| **Course / Semester** | B.E. Information Science and Engineering — Semester 7 |
+| **Institution** | Ramaiah Institute of Technology |
+| **Faculty In-charge** | Kavya Kasetty |
 | **Component** | Online Portfolio using GitHub Activity (20 marks) |
 
 ---
