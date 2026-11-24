@@ -29,7 +29,7 @@
       <span class="user-name" id="user-name"></span>
       <span class="user-email" id="user-email"></span>
     </div>
-    <button class="btn btn-ghost btn-sm" id="logout-btn" type="button">Sign out</button>
+    <button class="btn btn-ghost btn-sm signout-btn" id="logout-btn" type="button">Sign out</button>
   </div>
 </header>
 
@@ -119,10 +119,16 @@
 
   <!-- ============================ DASHBOARD ============================ -->
   <section class="view" id="view-dashboard" hidden>
-    <div class="page-head">
-      <p class="eyebrow">Candidate dashboard</p>
-      <h2><span id="greeting">Welcome</span>, <span id="dash-name"></span></h2>
-      <p class="muted">Please read the instructions carefully before you begin.</p>
+    <div class="page-head page-head-row">
+      <div>
+        <p class="eyebrow">Candidate dashboard</p>
+        <h2><span id="greeting">Welcome</span>, <span id="dash-name"></span></h2>
+        <p class="muted">Please read the instructions carefully before you begin.</p>
+      </div>
+      <div class="switch-user">
+        <span class="muted">Signed in as <strong id="dash-email"></strong></span>
+        <button class="btn btn-ghost btn-sm signout-btn" type="button">Sign out / switch user</button>
+      </div>
     </div>
 
     <div class="dash-grid">
@@ -240,6 +246,7 @@
       </details>
 
       <div class="result-actions">
+        <button class="btn btn-ghost signout-btn" type="button">Sign out</button>
         <button class="btn btn-ghost" id="print-btn" type="button">Print</button>
         <button class="btn btn-primary" id="back-btn" type="button">Back to dashboard</button>
       </div>

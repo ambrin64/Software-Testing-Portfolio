@@ -209,7 +209,9 @@ $('#login-alert').addEventListener('click', async e => {
   }
 });
 
-$('#logout-btn').addEventListener('click', async () => {
+$$('.signout-btn').forEach(b => b.addEventListener('click', signOut));
+
+async function signOut() {
   if (document.body.dataset.view === 'exam') {
     const ok = await modal({
       title: 'Leave the examination?',
@@ -220,7 +222,7 @@ $('#logout-btn').addEventListener('click', async () => {
   }
   try { await api('logout', {}); } catch { /* ignore */ }
   signedOut();
-});
+}
 
 /* ------------------------------------------------------------------ dashboard */
 
@@ -234,6 +236,7 @@ async function enterDashboard() {
   app.info = info;
   $('#greeting').textContent = greeting();
   $('#dash-name').textContent = app.user.name.split(/\s+/)[0];
+  $('#dash-email').textContent = app.user.email;
   $('#dash-title').textContent = info.title;
   $('#dash-sections').textContent = info.sections
     .map(s => `Section ${s.id}: ${s.title} (${s.questions})`).join('  ·  ');
