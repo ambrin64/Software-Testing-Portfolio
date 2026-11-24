@@ -1,0 +1,692 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuite name="JUnit Jupiter" tests="68" skipped="0" failures="7" errors="0" time="0.454" hostname="localhost" timestamp="2026-11-24T18:26:35">
+<testcase name="submitBeforeStart()" classname="com.oes.exam.ExamSessionStateTransitionTest" time="0.001">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.exam.ExamSessionStateTransitionTest]/[method:submitBeforeStart()]
+display-name: TC_EXM_ST_04: NOT_STARTED + submit() -&gt; IllegalStateException
+</system-out>
+</testcase>
+<testcase name="sectionNotAttempted()" classname="com.oes.result.ScoreEquivalencePartitioningTest" time="0.003">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.result.ScoreEquivalencePartitioningTest]/[method:sectionNotAttempted()]
+display-name: TC_SCR_EP_06: section B unanswered -&gt; allSectionsAttempted = false
+</system-out>
+</testcase>
+<testcase name="lockedAccountRejectsValidPassword()" classname="com.oes.auth.LoginStateTransitionTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.auth.LoginStateTransitionTest]/[method:lockedAccountRejectsValidPassword()]
+display-name: TC_LGN_ST_04: S3 (locked) + valid password -&gt; ACCOUNT_LOCKED
+</system-out>
+</testcase>
+<testcase name="emailWithoutAt()" classname="com.oes.registration.RegistrationEquivalencePartitioningTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.registration.RegistrationEquivalencePartitioningTest]/[method:emailWithoutAt()]
+display-name: TC_REG_EP_02: e-mail without '@' -&gt; INVALID_EMAIL
+</system-out>
+</testcase>
+<testcase name="passwordWithoutUppercase()" classname="com.oes.registration.RegistrationEquivalencePartitioningTest" time="0.002">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.registration.RegistrationEquivalencePartitioningTest]/[method:passwordWithoutUppercase()]
+display-name: TC_REG_EP_06: password without uppercase -&gt; INVALID_PASSWORD
+</system-out>
+</testcase>
+<testcase name="startTwice()" classname="com.oes.exam.ExamSessionStateTransitionTest" time="0.003">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.exam.ExamSessionStateTransitionTest]/[method:startTwice()]
+display-name: TC_EXM_ST_09: IN_PROGRESS + start() again -&gt; IllegalStateException
+</system-out>
+</testcase>
+<testcase name="gradeBands(String, double, String)[10]" classname="com.oes.result.GradeBoundaryValueTest" time="0.001">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.result.GradeBoundaryValueTest]/[test-template:gradeBands(java.lang.String, double, java.lang.String)]/[test-template-invocation:#10]
+display-name: TC_GRD_BVA_11: 100 % -&gt; A+
+</system-out>
+</testcase>
+<testcase name="emptyName()" classname="com.oes.registration.RegistrationEquivalencePartitioningTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.registration.RegistrationEquivalencePartitioningTest]/[method:emptyName()]
+display-name: TC_REG_EP_04: empty name -&gt; INVALID_NAME
+</system-out>
+</testcase>
+<testcase name="gradeBands(String, double, String)[9]" classname="com.oes.result.GradeBoundaryValueTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.result.GradeBoundaryValueTest]/[test-template:gradeBands(java.lang.String, double, java.lang.String)]/[test-template-invocation:#9]
+display-name: TC_GRD_BVA_10: 90 % -&gt; A+
+</system-out>
+</testcase>
+<testcase name="start()" classname="com.oes.exam.ExamSessionStateTransitionTest" time="0.001">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.exam.ExamSessionStateTransitionTest]/[method:start()]
+display-name: TC_EXM_ST_02: NOT_STARTED + start() -&gt; IN_PROGRESS
+</system-out>
+</testcase>
+<testcase name="gradeBands(String, double, String)[7]" classname="com.oes.result.GradeBoundaryValueTest" time="0.002">
+<failure message="expected: &lt;A&gt; but was: &lt;B&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;A&gt; but was: &lt;B&gt;
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at com.oes.result.GradeBoundaryValueTest.gradeBands(GradeBoundaryValueTest.java:37)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+</failure>
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.result.GradeBoundaryValueTest]/[test-template:gradeBands(java.lang.String, double, java.lang.String)]/[test-template-invocation:#7]
+display-name: TC_GRD_BVA_08: 75 % -&gt; A
+</system-out>
+</testcase>
+<testcase name="gradeBands(String, double, String)[8]" classname="com.oes.result.GradeBoundaryValueTest" time="0.002">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.result.GradeBoundaryValueTest]/[test-template:gradeBands(java.lang.String, double, java.lang.String)]/[test-template-invocation:#8]
+display-name: TC_GRD_BVA_09: 89 % -&gt; A
+</system-out>
+</testcase>
+<testcase name="gradeBands(String, double, String)[5]" classname="com.oes.result.GradeBoundaryValueTest" time="0.001">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.result.GradeBoundaryValueTest]/[test-template:gradeBands(java.lang.String, double, java.lang.String)]/[test-template-invocation:#5]
+display-name: TC_GRD_BVA_06: 60 % -&gt; B
+</system-out>
+</testcase>
+<testcase name="gradeBands(String, double, String)[6]" classname="com.oes.result.GradeBoundaryValueTest" time="0.002">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.result.GradeBoundaryValueTest]/[test-template:gradeBands(java.lang.String, double, java.lang.String)]/[test-template-invocation:#6]
+display-name: TC_GRD_BVA_07: 74 % -&gt; B
+</system-out>
+</testcase>
+<testcase name="gradeBands(String, double, String)[3]" classname="com.oes.result.GradeBoundaryValueTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.result.GradeBoundaryValueTest]/[test-template:gradeBands(java.lang.String, double, java.lang.String)]/[test-template-invocation:#3]
+display-name: TC_GRD_BVA_04: 40 % -&gt; C
+</system-out>
+</testcase>
+<testcase name="gradeBands(String, double, String)[4]" classname="com.oes.result.GradeBoundaryValueTest" time="0.002">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.result.GradeBoundaryValueTest]/[test-template:gradeBands(java.lang.String, double, java.lang.String)]/[test-template-invocation:#4]
+display-name: TC_GRD_BVA_05: 59 % -&gt; C
+</system-out>
+</testcase>
+<testcase name="unknownUser()" classname="com.oes.auth.LoginStateTransitionTest" time="0.001">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.auth.LoginStateTransitionTest]/[method:unknownUser()]
+display-name: TC_LGN_ST_08: unregistered user -&gt; USER_NOT_FOUND
+</system-out>
+</testcase>
+<testcase name="gradeBands(String, double, String)[1]" classname="com.oes.result.GradeBoundaryValueTest" time="0.006">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.result.GradeBoundaryValueTest]/[test-template:gradeBands(java.lang.String, double, java.lang.String)]/[test-template-invocation:#1]
+display-name: TC_GRD_BVA_02: 0 % -&gt; F
+</system-out>
+</testcase>
+<testcase name="gradeBands(String, double, String)[2]" classname="com.oes.result.GradeBoundaryValueTest" time="0.002">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.result.GradeBoundaryValueTest]/[test-template:gradeBands(java.lang.String, double, java.lang.String)]/[test-template-invocation:#2]
+display-name: TC_GRD_BVA_03: 39 % -&gt; F
+</system-out>
+</testcase>
+<testcase name="successfulLoginResetsCounter()" classname="com.oes.auth.LoginStateTransitionTest" time="0.001">
+<failure message="Multiple Failures (1 failure)&#13;&#10;&#09;org.opentest4j.AssertionFailedError: failed attempts after successful login ==&gt; expected: &lt;0&gt; but was: &lt;2&gt;" type="org.opentest4j.MultipleFailuresError">org.opentest4j.MultipleFailuresError: Multiple Failures (1 failure)
+	org.opentest4j.AssertionFailedError: failed attempts after successful login ==&gt; expected: &lt;0&gt; but was: &lt;2&gt;
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:80)
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:44)
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:38)
+	at org.junit.jupiter.api.Assertions.assertAll(Assertions.java:2944)
+	at com.oes.auth.LoginStateTransitionTest.successfulLoginResetsCounter(LoginStateTransitionTest.java:65)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: org.opentest4j.AssertionFailedError: failed attempts after successful login ==&gt; expected: &lt;0&gt; but was: &lt;2&gt;
+		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+		at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+		at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+		at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:563)
+		at com.oes.auth.LoginStateTransitionTest.lambda$successfulLoginResetsCounter$1(LoginStateTransitionTest.java:67)
+		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
+		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+		at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+		at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+		at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+		at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+		at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
+		... 7 more
+</failure>
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.auth.LoginStateTransitionTest]/[method:successfulLoginResetsCounter()]
+display-name: TC_LGN_ST_05: S2 + valid password -&gt; SUCCESS and counter reset to 0
+</system-out>
+</testcase>
+<testcase name="initialState()" classname="com.oes.exam.ExamSessionStateTransitionTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.exam.ExamSessionStateTransitionTest]/[method:initialState()]
+display-name: TC_EXM_ST_01: new session -&gt; NOT_STARTED
+</system-out>
+</testcase>
+<testcase name="answerAfterTimeOut()" classname="com.oes.exam.ExamSessionStateTransitionTest" time="0.001">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.exam.ExamSessionStateTransitionTest]/[method:answerAfterTimeOut()]
+display-name: TC_EXM_ST_08: TIMED_OUT + answer() -&gt; IllegalStateException
+</system-out>
+</testcase>
+<testcase name="ageBoundaries(String, int, RegistrationStatus)[2]" classname="com.oes.registration.RegistrationBoundaryValueTest" time="0.001">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.registration.RegistrationBoundaryValueTest]/[test-template:ageBoundaries(java.lang.String, int, com.oes.registration.RegistrationStatus)]/[test-template-invocation:#2]
+display-name: TC_REG_BVA_02: age 16 -&gt; SUCCESS
+</system-out>
+</testcase>
+<testcase name="ageBoundaries(String, int, RegistrationStatus)[3]" classname="com.oes.registration.RegistrationBoundaryValueTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.registration.RegistrationBoundaryValueTest]/[test-template:ageBoundaries(java.lang.String, int, com.oes.registration.RegistrationStatus)]/[test-template-invocation:#3]
+display-name: TC_REG_BVA_03: age 17 -&gt; SUCCESS
+</system-out>
+</testcase>
+<testcase name="mixed()" classname="com.oes.result.ScoreEquivalencePartitioningTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.result.ScoreEquivalencePartitioningTest]/[method:mixed()]
+display-name: TC_SCR_EP_03: 3 correct, 1 wrong, 1 unanswered -&gt; 11
+</system-out>
+</testcase>
+<testcase name="ageBoundaries(String, int, RegistrationStatus)[1]" classname="com.oes.registration.RegistrationBoundaryValueTest" time="0.006">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.registration.RegistrationBoundaryValueTest]/[test-template:ageBoundaries(java.lang.String, int, com.oes.registration.RegistrationStatus)]/[test-template-invocation:#1]
+display-name: TC_REG_BVA_01: age 15 -&gt; INVALID_AGE
+</system-out>
+</testcase>
+<testcase name="ageBoundaries(String, int, RegistrationStatus)[6]" classname="com.oes.registration.RegistrationBoundaryValueTest" time="0.001">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.registration.RegistrationBoundaryValueTest]/[test-template:ageBoundaries(java.lang.String, int, com.oes.registration.RegistrationStatus)]/[test-template-invocation:#6]
+display-name: TC_REG_BVA_06: age 61 -&gt; INVALID_AGE
+</system-out>
+</testcase>
+<testcase name="ageBoundaries(String, int, RegistrationStatus)[4]" classname="com.oes.registration.RegistrationBoundaryValueTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.registration.RegistrationBoundaryValueTest]/[test-template:ageBoundaries(java.lang.String, int, com.oes.registration.RegistrationStatus)]/[test-template-invocation:#4]
+display-name: TC_REG_BVA_04: age 59 -&gt; SUCCESS
+</system-out>
+</testcase>
+<testcase name="ageBoundaries(String, int, RegistrationStatus)[5]" classname="com.oes.registration.RegistrationBoundaryValueTest" time="0.002">
+<failure message="expected: &lt;SUCCESS&gt; but was: &lt;INVALID_AGE&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;SUCCESS&gt; but was: &lt;INVALID_AGE&gt;
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at com.oes.registration.RegistrationBoundaryValueTest.ageBoundaries(RegistrationBoundaryValueTest.java:23)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+</failure>
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.registration.RegistrationBoundaryValueTest]/[test-template:ageBoundaries(java.lang.String, int, com.oes.registration.RegistrationStatus)]/[test-template-invocation:#5]
+display-name: TC_REG_BVA_05: age 60 -&gt; SUCCESS
+</system-out>
+</testcase>
+<testcase name="failuresAreNotCarriedOverAfterSuccess()" classname="com.oes.auth.LoginStateTransitionTest" time="0.006">
+<failure message="Multiple Failures (2 failures)&#13;&#10;&#09;org.opentest4j.AssertionFailedError: expected: &lt;INVALID_CREDENTIALS&gt; but was: &lt;ACCOUNT_LOCKED&gt;&#13;&#10;&#09;org.opentest4j.AssertionFailedError: account should not be locked ==&gt; expected: &lt;false&gt; but was: &lt;true&gt;" type="org.opentest4j.MultipleFailuresError">org.opentest4j.MultipleFailuresError: Multiple Failures (2 failures)
+	org.opentest4j.AssertionFailedError: expected: &lt;INVALID_CREDENTIALS&gt; but was: &lt;ACCOUNT_LOCKED&gt;
+	org.opentest4j.AssertionFailedError: account should not be locked ==&gt; expected: &lt;false&gt; but was: &lt;true&gt;
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:80)
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:44)
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:38)
+	at org.junit.jupiter.api.Assertions.assertAll(Assertions.java:2944)
+	at com.oes.auth.LoginStateTransitionTest.failuresAreNotCarriedOverAfterSuccess(LoginStateTransitionTest.java:76)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: org.opentest4j.AssertionFailedError: expected: &lt;INVALID_CREDENTIALS&gt; but was: &lt;ACCOUNT_LOCKED&gt;
+		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+		at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+		at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+		at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+		at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+		at com.oes.auth.LoginStateTransitionTest.lambda$failuresAreNotCarriedOverAfterSuccess$2(LoginStateTransitionTest.java:77)
+		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
+		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+		at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+		at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+		at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+		at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+		at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
+		... 7 more
+	Suppressed: org.opentest4j.AssertionFailedError: account should not be locked ==&gt; expected: &lt;false&gt; but was: &lt;true&gt;
+		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+		at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
+		at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
+		at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:239)
+		at com.oes.auth.LoginStateTransitionTest.lambda$failuresAreNotCarriedOverAfterSuccess$3(LoginStateTransitionTest.java:78)
+		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
+		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+		at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+		at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+		at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+		at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+		at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
+		... 7 more
+</failure>
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.auth.LoginStateTransitionTest]/[method:failuresAreNotCarriedOverAfterSuccess()]
+display-name: TC_LGN_ST_06: invalid, valid, invalid, invalid -&gt; INVALID_CREDENTIALS, not locked
+</system-out>
+</testcase>
+<testcase name="answerAfterSubmit()" classname="com.oes.exam.ExamSessionStateTransitionTest" time="0.003">
+<failure message="answer accepted after submission ==&gt; Expected java.lang.IllegalStateException to be thrown, but nothing was thrown." type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: answer accepted after submission ==&gt; Expected java.lang.IllegalStateException to be thrown, but nothing was thrown.
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:39)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3153)
+	at com.oes.exam.ExamSessionStateTransitionTest.answerAfterSubmit(ExamSessionStateTransitionTest.java:72)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+</failure>
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.exam.ExamSessionStateTransitionTest]/[method:answerAfterSubmit()]
+display-name: TC_EXM_ST_06: SUBMITTED + answer() -&gt; IllegalStateException, answers unchanged
+</system-out>
+</testcase>
+<testcase name="submitAfterTimeOut()" classname="com.oes.exam.ExamSessionStateTransitionTest" time="0.001">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.exam.ExamSessionStateTransitionTest]/[method:submitAfterTimeOut()]
+display-name: TC_EXM_ST_10: TIMED_OUT + submit() -&gt; IllegalStateException
+</system-out>
+</testcase>
+<testcase name="nameLengthBoundaries(String, String, int, RegistrationStatus)[3]" classname="com.oes.registration.RegistrationBoundaryValueTest" time="0.001">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.registration.RegistrationBoundaryValueTest]/[test-template:nameLengthBoundaries(java.lang.String, java.lang.String, int, com.oes.registration.RegistrationStatus)]/[test-template-invocation:#3]
+display-name: TC_REG_BVA_13: name of length 30 -&gt; SUCCESS
+</system-out>
+</testcase>
+<testcase name="nameLengthBoundaries(String, String, int, RegistrationStatus)[4]" classname="com.oes.registration.RegistrationBoundaryValueTest" time="0.001">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.registration.RegistrationBoundaryValueTest]/[test-template:nameLengthBoundaries(java.lang.String, java.lang.String, int, com.oes.registration.RegistrationStatus)]/[test-template-invocation:#4]
+display-name: TC_REG_BVA_14: name of length 31 -&gt; INVALID_NAME
+</system-out>
+</testcase>
+<testcase name="nameLengthBoundaries(String, String, int, RegistrationStatus)[1]" classname="com.oes.registration.RegistrationBoundaryValueTest" time="0.007">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.registration.RegistrationBoundaryValueTest]/[test-template:nameLengthBoundaries(java.lang.String, java.lang.String, int, com.oes.registration.RegistrationStatus)]/[test-template-invocation:#1]
+display-name: TC_REG_BVA_11: name of length 2 -&gt; INVALID_NAME
+</system-out>
+</testcase>
+<testcase name="nameLengthBoundaries(String, String, int, RegistrationStatus)[2]" classname="com.oes.registration.RegistrationBoundaryValueTest" time="0.001">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.registration.RegistrationBoundaryValueTest]/[test-template:nameLengthBoundaries(java.lang.String, java.lang.String, int, com.oes.registration.RegistrationStatus)]/[test-template-invocation:#2]
+display-name: TC_REG_BVA_12: name of length 3 -&gt; SUCCESS
+</system-out>
+</testcase>
+<testcase name="invalidOption()" classname="com.oes.exam.ExamSessionStateTransitionTest" time="0.008">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.exam.ExamSessionStateTransitionTest]/[method:invalidOption()]
+display-name: TC_EXM_ST_11: IN_PROGRESS + answer() with invalid option -&gt; IllegalArgumentException
+</system-out>
+</testcase>
+<testcase name="submit()" classname="com.oes.exam.ExamSessionStateTransitionTest" time="0.001">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.exam.ExamSessionStateTransitionTest]/[method:submit()]
+display-name: TC_EXM_ST_05: IN_PROGRESS + submit() -&gt; SUBMITTED
+</system-out>
+</testcase>
+<testcase name="nullEmail()" classname="com.oes.registration.RegistrationEquivalencePartitioningTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.registration.RegistrationEquivalencePartitioningTest]/[method:nullEmail()]
+display-name: TC_REG_EP_08: null e-mail -&gt; INVALID_EMAIL
+</system-out>
+</testcase>
+<testcase name="oneFailure()" classname="com.oes.auth.LoginStateTransitionTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.auth.LoginStateTransitionTest]/[method:oneFailure()]
+display-name: TC_LGN_ST_02: S0 + invalid password -&gt; INVALID_CREDENTIALS, S1
+</system-out>
+</testcase>
+<testcase name="answerBeforeStart()" classname="com.oes.exam.ExamSessionStateTransitionTest" time="0.008">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.exam.ExamSessionStateTransitionTest]/[method:answerBeforeStart()]
+display-name: TC_EXM_ST_03: NOT_STARTED + answer() -&gt; IllegalStateException
+</system-out>
+</testcase>
+<testcase name="changeAnswer()" classname="com.oes.exam.ExamSessionStateTransitionTest" time="0.001">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.exam.ExamSessionStateTransitionTest]/[method:changeAnswer()]
+display-name: TC_EXM_ST_12: IN_PROGRESS + change answer -&gt; last answer saved
+</system-out>
+</testcase>
+<testcase name="duplicateEmail()" classname="com.oes.registration.RegistrationEquivalencePartitioningTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.registration.RegistrationEquivalencePartitioningTest]/[method:duplicateEmail()]
+display-name: TC_REG_EP_07: already registered e-mail -&gt; DUPLICATE_EMAIL
+</system-out>
+</testcase>
+<testcase name="passwordWithoutDigit()" classname="com.oes.registration.RegistrationEquivalencePartitioningTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.registration.RegistrationEquivalencePartitioningTest]/[method:passwordWithoutDigit()]
+display-name: TC_REG_EP_05: password without digit -&gt; INVALID_PASSWORD
+</system-out>
+</testcase>
+<testcase name="timeOut()" classname="com.oes.exam.ExamSessionStateTransitionTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.exam.ExamSessionStateTransitionTest]/[method:timeOut()]
+display-name: TC_EXM_ST_07: IN_PROGRESS + duration elapsed -&gt; TIMED_OUT
+</system-out>
+</testcase>
+<testcase name="allWrong()" classname="com.oes.result.ScoreEquivalencePartitioningTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.result.ScoreEquivalencePartitioningTest]/[method:allWrong()]
+display-name: TC_SCR_EP_02: all answers wrong -&gt; 0 (never negative)
+</system-out>
+</testcase>
+<testcase name="decisionTable(String, String, double, boolean, boolean, ResultStatus)[6]" classname="com.oes.result.ResultDecisionTableTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.result.ResultDecisionTableTest]/[test-template:decisionTable(java.lang.String, java.lang.String, double, boolean, boolean, com.oes.result.ResultStatus)]/[test-template-invocation:#6]
+display-name: TC_RES_DT_06 (R6): 30 %, malpractice=false, allSections=false -&gt; FAIL
+</system-out>
+</testcase>
+<testcase name="passwordLengthBoundaries(String, String, int, RegistrationStatus)[1]" classname="com.oes.registration.RegistrationBoundaryValueTest" time="0.001">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.registration.RegistrationBoundaryValueTest]/[test-template:passwordLengthBoundaries(java.lang.String, java.lang.String, int, com.oes.registration.RegistrationStatus)]/[test-template-invocation:#1]
+display-name: TC_REG_BVA_07: password 'Exam202' (length 7) -&gt; INVALID_PASSWORD
+</system-out>
+</testcase>
+<testcase name="decisionTable(String, String, double, boolean, boolean, ResultStatus)[5]" classname="com.oes.result.ResultDecisionTableTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.result.ResultDecisionTableTest]/[test-template:decisionTable(java.lang.String, java.lang.String, double, boolean, boolean, com.oes.result.ResultStatus)]/[test-template-invocation:#5]
+display-name: TC_RES_DT_05 (R5): 30 %, malpractice=false, allSections=true -&gt; FAIL
+</system-out>
+</testcase>
+<testcase name="threeFailuresLockAccount()" classname="com.oes.auth.LoginStateTransitionTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.auth.LoginStateTransitionTest]/[method:threeFailuresLockAccount()]
+display-name: TC_LGN_ST_03: three invalid passwords -&gt; ACCOUNT_LOCKED, S3
+</system-out>
+</testcase>
+<testcase name="passwordLengthBoundaries(String, String, int, RegistrationStatus)[2]" classname="com.oes.registration.RegistrationBoundaryValueTest" time="0.001">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.registration.RegistrationBoundaryValueTest]/[test-template:passwordLengthBoundaries(java.lang.String, java.lang.String, int, com.oes.registration.RegistrationStatus)]/[test-template-invocation:#2]
+display-name: TC_REG_BVA_08: password 'Exam2026' (length 8) -&gt; SUCCESS
+</system-out>
+</testcase>
+<testcase name="decisionTable(String, String, double, boolean, boolean, ResultStatus)[8]" classname="com.oes.result.ResultDecisionTableTest" time="0.004">
+<failure message="expected: &lt;WITHHELD&gt; but was: &lt;FAIL&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;WITHHELD&gt; but was: &lt;FAIL&gt;
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at com.oes.result.ResultDecisionTableTest.decisionTable(ResultDecisionTableTest.java:28)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+</failure>
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.result.ResultDecisionTableTest]/[test-template:decisionTable(java.lang.String, java.lang.String, double, boolean, boolean, com.oes.result.ResultStatus)]/[test-template-invocation:#8]
+display-name: TC_RES_DT_08 (R8): 30 %, malpractice=true, allSections=false -&gt; WITHHELD
+</system-out>
+</testcase>
+<testcase name="passwordLengthBoundaries(String, String, int, RegistrationStatus)[3]" classname="com.oes.registration.RegistrationBoundaryValueTest" time="0.001">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.registration.RegistrationBoundaryValueTest]/[test-template:passwordLengthBoundaries(java.lang.String, java.lang.String, int, com.oes.registration.RegistrationStatus)]/[test-template-invocation:#3]
+display-name: TC_REG_BVA_09: password 'Exam2026Exam2026' (length 16) -&gt; SUCCESS
+</system-out>
+</testcase>
+<testcase name="decisionTable(String, String, double, boolean, boolean, ResultStatus)[7]" classname="com.oes.result.ResultDecisionTableTest" time="0.016">
+<failure message="expected: &lt;WITHHELD&gt; but was: &lt;FAIL&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;WITHHELD&gt; but was: &lt;FAIL&gt;
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at com.oes.result.ResultDecisionTableTest.decisionTable(ResultDecisionTableTest.java:28)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+</failure>
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.result.ResultDecisionTableTest]/[test-template:decisionTable(java.lang.String, java.lang.String, double, boolean, boolean, com.oes.result.ResultStatus)]/[test-template-invocation:#7]
+display-name: TC_RES_DT_07 (R7): 30 %, malpractice=true, allSections=true -&gt; WITHHELD
+</system-out>
+</testcase>
+<testcase name="aboveRange()" classname="com.oes.result.GradeBoundaryValueTest" time="0.002">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.result.GradeBoundaryValueTest]/[method:aboveRange()]
+display-name: TC_GRD_BVA_12: 101 % -&gt; IllegalArgumentException
+</system-out>
+</testcase>
+<testcase name="passwordLengthBoundaries(String, String, int, RegistrationStatus)[4]" classname="com.oes.registration.RegistrationBoundaryValueTest" time="0.001">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.registration.RegistrationBoundaryValueTest]/[test-template:passwordLengthBoundaries(java.lang.String, java.lang.String, int, com.oes.registration.RegistrationStatus)]/[test-template-invocation:#4]
+display-name: TC_REG_BVA_10: password 'Exam2026Exam20261' (length 17) -&gt; INVALID_PASSWORD
+</system-out>
+</testcase>
+<testcase name="decisionTable(String, String, double, boolean, boolean, ResultStatus)[2]" classname="com.oes.result.ResultDecisionTableTest" time="0.002">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.result.ResultDecisionTableTest]/[test-template:decisionTable(java.lang.String, java.lang.String, double, boolean, boolean, com.oes.result.ResultStatus)]/[test-template-invocation:#2]
+display-name: TC_RES_DT_02 (R2): 65 %, malpractice=false, allSections=false -&gt; FAIL
+</system-out>
+</testcase>
+<testcase name="decisionTable(String, String, double, boolean, boolean, ResultStatus)[1]" classname="com.oes.result.ResultDecisionTableTest" time="0.076">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.result.ResultDecisionTableTest]/[test-template:decisionTable(java.lang.String, java.lang.String, double, boolean, boolean, com.oes.result.ResultStatus)]/[test-template-invocation:#1]
+display-name: TC_RES_DT_01 (R1): 65 %, malpractice=false, allSections=true -&gt; PASS
+</system-out>
+</testcase>
+<testcase name="decisionTable(String, String, double, boolean, boolean, ResultStatus)[4]" classname="com.oes.result.ResultDecisionTableTest" time="0.002">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.result.ResultDecisionTableTest]/[test-template:decisionTable(java.lang.String, java.lang.String, double, boolean, boolean, com.oes.result.ResultStatus)]/[test-template-invocation:#4]
+display-name: TC_RES_DT_04 (R4): 65 %, malpractice=true, allSections=false -&gt; WITHHELD
+</system-out>
+</testcase>
+<testcase name="decisionTable(String, String, double, boolean, boolean, ResultStatus)[3]" classname="com.oes.result.ResultDecisionTableTest" time="0.001">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.result.ResultDecisionTableTest]/[test-template:decisionTable(java.lang.String, java.lang.String, double, boolean, boolean, com.oes.result.ResultStatus)]/[test-template-invocation:#3]
+display-name: TC_RES_DT_03 (R3): 65 %, malpractice=true, allSections=true -&gt; WITHHELD
+</system-out>
+</testcase>
+<testcase name="adminUnlock()" classname="com.oes.auth.LoginStateTransitionTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.auth.LoginStateTransitionTest]/[method:adminUnlock()]
+display-name: TC_LGN_ST_07: S3 + admin unlock + valid password -&gt; SUCCESS
+</system-out>
+</testcase>
+<testcase name="allCorrect()" classname="com.oes.result.ScoreEquivalencePartitioningTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.result.ScoreEquivalencePartitioningTest]/[method:allCorrect()]
+display-name: TC_SCR_EP_01: all answers correct -&gt; 20
+</system-out>
+</testcase>
+<testcase name="validLoginFromInitialState()" classname="com.oes.auth.LoginStateTransitionTest" time="0.009">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.auth.LoginStateTransitionTest]/[method:validLoginFromInitialState()]
+display-name: TC_LGN_ST_01: S0 + valid password -&gt; SUCCESS, stays S0
+</system-out>
+</testcase>
+<testcase name="belowRange()" classname="com.oes.result.GradeBoundaryValueTest" time="0.002">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.result.GradeBoundaryValueTest]/[method:belowRange()]
+display-name: TC_GRD_BVA_01: -1 % -&gt; IllegalArgumentException
+</system-out>
+</testcase>
+<testcase name="noAnswers()" classname="com.oes.result.ScoreEquivalencePartitioningTest" time="0.001">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.result.ScoreEquivalencePartitioningTest]/[method:noAnswers()]
+display-name: TC_SCR_EP_04: no answers -&gt; 0
+</system-out>
+</testcase>
+<testcase name="allValid()" classname="com.oes.registration.RegistrationEquivalencePartitioningTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.registration.RegistrationEquivalencePartitioningTest]/[method:allValid()]
+display-name: TC_REG_EP_01: all inputs valid -&gt; SUCCESS
+</system-out>
+</testcase>
+<testcase name="emailWithoutDomain()" classname="com.oes.registration.RegistrationEquivalencePartitioningTest" time="0.002">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.registration.RegistrationEquivalencePartitioningTest]/[method:emailWithoutDomain()]
+display-name: TC_REG_EP_03: e-mail without domain -&gt; INVALID_EMAIL
+</system-out>
+</testcase>
+<testcase name="percentage()" classname="com.oes.result.ScoreEquivalencePartitioningTest" time="0.001">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.oes.result.ScoreEquivalencePartitioningTest]/[method:percentage()]
+display-name: TC_SCR_EP_05: score 11 of 20 -&gt; 55.0 %
+</system-out>
+</testcase>
+<system-out>
+unique-id: [engine:junit-jupiter]
+display-name: JUnit Jupiter
+</system-out>
+</testsuite>

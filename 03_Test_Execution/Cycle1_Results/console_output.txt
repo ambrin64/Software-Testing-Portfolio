@@ -1,0 +1,213 @@
+﻿╷
+├─ JUnit Platform Suite ✔
+├─ JUnit Jupiter ✔
+│  ├─ Result Status - Decision Table ✔
+│  │  └─ Decision table rules R1-R8 ✔
+│  │     ├─ TC_RES_DT_01 (R1): 65 %, malpractice=false, allSections=true -> PASS ✔
+│  │     ├─ TC_RES_DT_02 (R2): 65 %, malpractice=false, allSections=false -> FAIL ✔
+│  │     ├─ TC_RES_DT_03 (R3): 65 %, malpractice=true, allSections=true -> WITHHELD ✔
+│  │     ├─ TC_RES_DT_04 (R4): 65 %, malpractice=true, allSections=false -> WITHHELD ✔
+│  │     ├─ TC_RES_DT_05 (R5): 30 %, malpractice=false, allSections=true -> FAIL ✔
+│  │     ├─ TC_RES_DT_06 (R6): 30 %, malpractice=false, allSections=false -> FAIL ✔
+│  │     ├─ TC_RES_DT_07 (R7): 30 %, malpractice=true, allSections=true -> WITHHELD ✘ expected: <WITHHELD> but was: <FAIL>
+│  │     └─ TC_RES_DT_08 (R8): 30 %, malpractice=true, allSections=false -> WITHHELD ✘ expected: <WITHHELD> but was: <FAIL>
+│  ├─ Login - State Transition ✔
+│  │  ├─ TC_LGN_ST_01: S0 + valid password -> SUCCESS, stays S0 ✔
+│  │  ├─ TC_LGN_ST_06: invalid, valid, invalid, invalid -> INVALID_CREDENTIALS, not locke... ✘ Multiple Failures (2 failures)
+│  │  │        	org.opentest4j.AssertionFailedError: expected: <INVALID_CREDENTIALS> but was: <ACCOUNT_LOCKED>
+│  │  │        	org.opentest4j.AssertionFailedError: account should not be locked ==> expected: <false> but was: <true>
+│  │  ├─ TC_LGN_ST_02: S0 + invalid password -> INVALID_CREDENTIALS, S1 ✔
+│  │  ├─ TC_LGN_ST_03: three invalid passwords -> ACCOUNT_LOCKED, S3 ✔
+│  │  ├─ TC_LGN_ST_07: S3 + admin unlock + valid password -> SUCCESS ✔
+│  │  ├─ TC_LGN_ST_04: S3 (locked) + valid password -> ACCOUNT_LOCKED ✔
+│  │  ├─ TC_LGN_ST_05: S2 + valid password -> SUCCESS and counter reset to 0 ✘ Multiple Failures (1 failure)
+│  │  │        	org.opentest4j.AssertionFailedError: failed attempts after successful login ==> expected: <0> but was: <2>
+│  │  └─ TC_LGN_ST_08: unregistered user -> USER_NOT_FOUND ✔
+│  ├─ Registration - Equivalence Partitioning ✔
+│  │  ├─ TC_REG_EP_03: e-mail without domain -> INVALID_EMAIL ✔
+│  │  ├─ TC_REG_EP_04: empty name -> INVALID_NAME ✔
+│  │  ├─ TC_REG_EP_06: password without uppercase -> INVALID_PASSWORD ✔
+│  │  ├─ TC_REG_EP_07: already registered e-mail -> DUPLICATE_EMAIL ✔
+│  │  ├─ TC_REG_EP_05: password without digit -> INVALID_PASSWORD ✔
+│  │  ├─ TC_REG_EP_08: null e-mail -> INVALID_EMAIL ✔
+│  │  ├─ TC_REG_EP_02: e-mail without '@' -> INVALID_EMAIL ✔
+│  │  └─ TC_REG_EP_01: all inputs valid -> SUCCESS ✔
+│  ├─ Grading - Boundary Value Analysis ✔
+│  │  ├─ TC_GRD_BVA_01: -1 % -> IllegalArgumentException ✔
+│  │  ├─ Grade band edges ✔
+│  │  │  ├─ TC_GRD_BVA_02: 0 % -> F ✔
+│  │  │  ├─ TC_GRD_BVA_03: 39 % -> F ✔
+│  │  │  ├─ TC_GRD_BVA_04: 40 % -> C ✔
+│  │  │  ├─ TC_GRD_BVA_05: 59 % -> C ✔
+│  │  │  ├─ TC_GRD_BVA_06: 60 % -> B ✔
+│  │  │  ├─ TC_GRD_BVA_07: 74 % -> B ✔
+│  │  │  ├─ TC_GRD_BVA_08: 75 % -> A ✘ expected: <A> but was: <B>
+│  │  │  ├─ TC_GRD_BVA_09: 89 % -> A ✔
+│  │  │  ├─ TC_GRD_BVA_10: 90 % -> A+ ✔
+│  │  │  └─ TC_GRD_BVA_11: 100 % -> A+ ✔
+│  │  └─ TC_GRD_BVA_12: 101 % -> IllegalArgumentException ✔
+│  ├─ Exam Session - State Transition ✔
+│  │  ├─ TC_EXM_ST_03: NOT_STARTED + answer() -> IllegalStateException ✔
+│  │  ├─ TC_EXM_ST_09: IN_PROGRESS + start() again -> IllegalStateException ✔
+│  │  ├─ TC_EXM_ST_07: IN_PROGRESS + duration elapsed -> TIMED_OUT ✔
+│  │  ├─ TC_EXM_ST_11: IN_PROGRESS + answer() with invalid option -> IllegalArgumentExcep... ✔
+│  │  ├─ TC_EXM_ST_05: IN_PROGRESS + submit() -> SUBMITTED ✔
+│  │  ├─ TC_EXM_ST_06: SUBMITTED + answer() -> IllegalStateException, answers unchanged ✘ answer accepted after submission ==> Expected java.lang.IllegalStateException to be thrown, but nothing was thrown.
+│  │  ├─ TC_EXM_ST_12: IN_PROGRESS + change answer -> last answer saved ✔
+│  │  ├─ TC_EXM_ST_01: new session -> NOT_STARTED ✔
+│  │  ├─ TC_EXM_ST_02: NOT_STARTED + start() -> IN_PROGRESS ✔
+│  │  ├─ TC_EXM_ST_10: TIMED_OUT + submit() -> IllegalStateException ✔
+│  │  ├─ TC_EXM_ST_04: NOT_STARTED + submit() -> IllegalStateException ✔
+│  │  └─ TC_EXM_ST_08: TIMED_OUT + answer() -> IllegalStateException ✔
+│  ├─ Registration - Boundary Value Analysis ✔
+│  │  ├─ Name length (valid range 3-30) ✔
+│  │  │  ├─ TC_REG_BVA_11: name of length 2 -> INVALID_NAME ✔
+│  │  │  ├─ TC_REG_BVA_12: name of length 3 -> SUCCESS ✔
+│  │  │  ├─ TC_REG_BVA_13: name of length 30 -> SUCCESS ✔
+│  │  │  └─ TC_REG_BVA_14: name of length 31 -> INVALID_NAME ✔
+│  │  ├─ Password length (valid range 8-16) ✔
+│  │  │  ├─ TC_REG_BVA_07: password 'Exam202' (length 7) -> INVALID_PASSWORD ✔
+│  │  │  ├─ TC_REG_BVA_08: password 'Exam2026' (length 8) -> SUCCESS ✔
+│  │  │  ├─ TC_REG_BVA_09: password 'Exam2026Exam2026' (length 16) -> SUCCESS ✔
+│  │  │  └─ TC_REG_BVA_10: password 'Exam2026Exam20261' (length 17) -> INVALID_PASSWORD ✔
+│  │  └─ Age (valid range 16-60 inclusive) ✔
+│  │     ├─ TC_REG_BVA_01: age 15 -> INVALID_AGE ✔
+│  │     ├─ TC_REG_BVA_02: age 16 -> SUCCESS ✔
+│  │     ├─ TC_REG_BVA_03: age 17 -> SUCCESS ✔
+│  │     ├─ TC_REG_BVA_04: age 59 -> SUCCESS ✔
+│  │     ├─ TC_REG_BVA_05: age 60 -> SUCCESS ✘ expected: <SUCCESS> but was: <INVALID_AGE>
+│  │     └─ TC_REG_BVA_06: age 61 -> INVALID_AGE ✔
+│  └─ Score Calculation - Equivalence Partitioning ✔
+│     ├─ TC_SCR_EP_01: all answers correct -> 20 ✔
+│     ├─ TC_SCR_EP_06: section B unanswered -> allSectionsAttempted = false ✔
+│     ├─ TC_SCR_EP_05: score 11 of 20 -> 55.0 % ✔
+│     ├─ TC_SCR_EP_04: no answers -> 0 ✔
+│     ├─ TC_SCR_EP_03: 3 correct, 1 wrong, 1 unanswered -> 11 ✔
+│     └─ TC_SCR_EP_02: all answers wrong -> 0 (never negative) ✔
+└─ JUnit Vintage ✔
+
+Failures (7):
+  JUnit Jupiter:Result Status - Decision Table:Decision table rules R1-R8:TC_RES_DT_07 (R7): 30 %, malpractice=true, allSections=true -> WITHHELD
+    MethodSource [className = 'com.oes.result.ResultDecisionTableTest', methodName = 'decisionTable', methodParameterTypes = 'java.lang.String, java.lang.String, double, boolean, boolean, com.oes.result.ResultStatus']
+    => org.opentest4j.AssertionFailedError: expected: <WITHHELD> but was: <FAIL>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       com.oes.result.ResultDecisionTableTest.decisionTable(ResultDecisionTableTest.java:28)
+       java.base/java.lang.reflect.Method.invoke(Method.java:580)
+       java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+       java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+       [...]
+  JUnit Jupiter:Result Status - Decision Table:Decision table rules R1-R8:TC_RES_DT_08 (R8): 30 %, malpractice=true, allSections=false -> WITHHELD
+    MethodSource [className = 'com.oes.result.ResultDecisionTableTest', methodName = 'decisionTable', methodParameterTypes = 'java.lang.String, java.lang.String, double, boolean, boolean, com.oes.result.ResultStatus']
+    => org.opentest4j.AssertionFailedError: expected: <WITHHELD> but was: <FAIL>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       com.oes.result.ResultDecisionTableTest.decisionTable(ResultDecisionTableTest.java:28)
+       java.base/java.lang.reflect.Method.invoke(Method.java:580)
+       java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+       java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+       [...]
+  JUnit Jupiter:Login - State Transition:TC_LGN_ST_06: invalid, valid, invalid, invalid -> INVALID_CREDENTIALS, not locked
+    MethodSource [className = 'com.oes.auth.LoginStateTransitionTest', methodName = 'failuresAreNotCarriedOverAfterSuccess', methodParameterTypes = '']
+    => org.opentest4j.MultipleFailuresError: Multiple Failures (2 failures)
+	org.opentest4j.AssertionFailedError: expected: <INVALID_CREDENTIALS> but was: <ACCOUNT_LOCKED>
+	org.opentest4j.AssertionFailedError: account should not be locked ==> expected: <false> but was: <true>
+       org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:80)
+       org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:44)
+       org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:38)
+       org.junit.jupiter.api.Assertions.assertAll(Assertions.java:2944)
+       com.oes.auth.LoginStateTransitionTest.failuresAreNotCarriedOverAfterSuccess(LoginStateTransitionTest.java:76)
+       [...]
+       Suppressed: org.opentest4j.AssertionFailedError: expected: <INVALID_CREDENTIALS> but was: <ACCOUNT_LOCKED>
+         org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+         org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+         org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+         org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+         org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+         [...]
+       Suppressed: org.opentest4j.AssertionFailedError: account should not be locked ==> expected: <false> but was: <true>
+         org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+         org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+         org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)
+         org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)
+         org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:239)
+         [...]
+  JUnit Jupiter:Login - State Transition:TC_LGN_ST_05: S2 + valid password -> SUCCESS and counter reset to 0
+    MethodSource [className = 'com.oes.auth.LoginStateTransitionTest', methodName = 'successfulLoginResetsCounter', methodParameterTypes = '']
+    => org.opentest4j.MultipleFailuresError: Multiple Failures (1 failure)
+	org.opentest4j.AssertionFailedError: failed attempts after successful login ==> expected: <0> but was: <2>
+       org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:80)
+       org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:44)
+       org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:38)
+       org.junit.jupiter.api.Assertions.assertAll(Assertions.java:2944)
+       com.oes.auth.LoginStateTransitionTest.successfulLoginResetsCounter(LoginStateTransitionTest.java:65)
+       [...]
+       Suppressed: org.opentest4j.AssertionFailedError: failed attempts after successful login ==> expected: <0> but was: <2>
+         org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+         org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+         org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+         org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+         org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:563)
+         [...]
+  JUnit Jupiter:Grading - Boundary Value Analysis:Grade band edges:TC_GRD_BVA_08: 75 % -> A
+    MethodSource [className = 'com.oes.result.GradeBoundaryValueTest', methodName = 'gradeBands', methodParameterTypes = 'java.lang.String, double, java.lang.String']
+    => org.opentest4j.AssertionFailedError: expected: <A> but was: <B>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       com.oes.result.GradeBoundaryValueTest.gradeBands(GradeBoundaryValueTest.java:37)
+       java.base/java.lang.reflect.Method.invoke(Method.java:580)
+       java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+       java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+       [...]
+  JUnit Jupiter:Exam Session - State Transition:TC_EXM_ST_06: SUBMITTED + answer() -> IllegalStateException, answers unchanged
+    MethodSource [className = 'com.oes.exam.ExamSessionStateTransitionTest', methodName = 'answerAfterSubmit', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: answer accepted after submission ==> Expected java.lang.IllegalStateException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:39)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3153)
+       com.oes.exam.ExamSessionStateTransitionTest.answerAfterSubmit(ExamSessionStateTransitionTest.java:72)
+       java.base/java.lang.reflect.Method.invoke(Method.java:580)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+  JUnit Jupiter:Registration - Boundary Value Analysis:Age (valid range 16-60 inclusive):TC_REG_BVA_05: age 60 -> SUCCESS
+    MethodSource [className = 'com.oes.registration.RegistrationBoundaryValueTest', methodName = 'ageBoundaries', methodParameterTypes = 'java.lang.String, int, com.oes.registration.RegistrationStatus']
+    => org.opentest4j.AssertionFailedError: expected: <SUCCESS> but was: <INVALID_AGE>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+       com.oes.registration.RegistrationBoundaryValueTest.ageBoundaries(RegistrationBoundaryValueTest.java:23)
+       java.base/java.lang.reflect.Method.invoke(Method.java:580)
+       java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+       java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+       [...]
+
+Test run finished after 788 ms
+[        15 containers found      ]
+[         0 containers skipped    ]
+[        15 containers started    ]
+[         0 containers aborted    ]
+[        15 containers successful ]
+[         0 containers failed     ]
+[        68 tests found           ]
+[         0 tests skipped         ]
+[        68 tests started         ]
+[         0 tests aborted         ]
+[        61 tests successful      ]
+[         7 tests failed          ]
+
