@@ -34,7 +34,7 @@ and the **JUnit 5 automated test suite** that executes all 68 designed test case
 ```powershell
 .\run_tests.ps1                                   # compile + run all tests
 .\run_tests.ps1 -Demo                             # run the console demo
-.\run_tests.ps1 -Web                              # start the web UI at http://localhost:8080/
+.\run_tests.ps1 -Web                              # start the web UI at http://localhost:9090/
 .\run_tests.ps1 -Web -ExamSeconds 60              # web UI with a 1-minute exam (to show time-out)
 python tools\junit_xml_to_html.py out\reports\TEST-junit-jupiter.xml report.html   # HTML report
 ```

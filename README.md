@@ -136,6 +136,6 @@ To run the application itself:
 
 | Command (PowerShell) | Git Bash equivalent | What it does |
 |----------------------|---------------------|--------------|
-| `.\run_tests.ps1 -Web` | `./run_tests.sh --web` | Starts the **web UI** at http://localhost:8080/ (demo login `demo@oes.edu` / `Exam2026`) |
+| `.\run_tests.ps1 -Web` | `./run_tests.sh --web` | Starts the **web UI** at http://localhost:9090/ (demo login `demo@oes.edu` / `Exam2026`) |
 | `.\run_tests.ps1 -Web -ExamSeconds 60` | `EXAM_SECONDS=60 ./run_tests.sh --web` | Same, with a 1-minute exam to show the automatic time-out |
 | `.\run_tests.ps1 -Demo` | `./run_tests.sh --demo` | Console demo of the full flow |

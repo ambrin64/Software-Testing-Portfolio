@@ -16,6 +16,7 @@ import com.sun.net.httpserver.HttpServer;
 import java.awt.Desktop;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.net.BindException;
 import java.net.InetSocketAddress;
 import java.net.URI;
 import java.net.URLDecoder;
@@ -38,7 +39,7 @@ import java.util.UUID;
  * lock-out, exam state machine, scoring, grading and result status) is delegated to the same
  * classes that the JUnit 5 suite tests.
  *
- * <p>Run with {@code .\run_tests.ps1 -Web} and open http://localhost:8080/.
+ * <p>Run with {@code .\run_tests.ps1 -Web} and open http://localhost:9090/.
  */
 public class WebServer {
 
@@ -85,7 +86,7 @@ public class WebServer {
     }
 
     public static void main(String[] args) throws IOException {
-        int port = Integer.getInteger("oes.port", 8080);
+        int port = Integer.getInteger("oes.port", 9090);
         long examSeconds = Long.getLong("oes.examSeconds", 600L);
         Path webRoot = Paths.get(System.getProperty("oes.webRoot", "src/main/resources/web"))
                 .toAbsolutePath().normalize();
@@ -98,7 +99,15 @@ public class WebServer {
         }
         registerUser(DEMO_NAME, DEMO_EMAIL, 21, DEMO_PASSWORD);
 
-        HttpServer server = HttpServer.create(new InetSocketAddress("localhost", port), 0);
+        HttpServer server;
+        try {
+            server = HttpServer.create(new InetSocketAddress("localhost", port), 0);
+        } catch (BindException e) {
+            System.err.println("Port " + port + " is already in use (is the server already running in another terminal?).");
+            System.err.println("Stop the other program, or start on a different port, e.g.:  .\\run_tests.ps1 -Web -Port " + (port + 1));
+            System.exit(1);
+            return;
+        }
         server.createContext("/api/", this::handleApi);
         server.createContext("/", this::handleStatic);
         server.start();

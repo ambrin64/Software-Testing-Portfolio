@@ -2,7 +2,7 @@
 # Compiles the Online Examination System + JUnit 5 tests and runs the test suite.
 # Usage:  ./run_tests.sh                 -> run all tests, XML report in ./out/reports
 #         ./run_tests.sh --demo          -> run the console demo application instead
-#         ./run_tests.sh --web           -> start the web UI on http://localhost:8080/
+#         ./run_tests.sh --web           -> start the web UI on http://localhost:9090/
 #         EXAM_SECONDS=60 ./run_tests.sh --web  -> web UI with a 1-minute exam
 set -euo pipefail
 cd "$(dirname "$0")"
@@ -22,7 +22,7 @@ if [[ "${1:-}" == "--demo" ]]; then
 fi
 
 if [[ "${1:-}" == "--web" ]]; then
-  "$JAVA" "-Does.examSeconds=${EXAM_SECONDS:-600}" "-Does.port=${PORT:-8080}" -cp out/main com.oes.web.WebServer
+  "$JAVA" "-Does.examSeconds=${EXAM_SECONDS:-600}" "-Does.port=${PORT:-9090}" -cp out/main com.oes.web.WebServer
   exit $?
 fi
 

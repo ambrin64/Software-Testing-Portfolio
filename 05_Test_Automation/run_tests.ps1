@@ -2,14 +2,14 @@
 # Usage:  .\run_tests.ps1                      -> run all tests, XML report in .\out\reports
 #         .\run_tests.ps1 -ReportDir <path>    -> write the JUnit XML report elsewhere
 #         .\run_tests.ps1 -Demo                -> run the console demo application instead
-#         .\run_tests.ps1 -Web                 -> start the web UI on http://localhost:8080/
+#         .\run_tests.ps1 -Web                 -> start the web UI on http://localhost:9090/
 #         .\run_tests.ps1 -Web -ExamSeconds 60 -> web UI with a 1-minute exam (to demo time-out)
 param(
     [string]$ReportDir = "out/reports",
     [switch]$Demo,
     [switch]$Web,
     [int]$ExamSeconds = 600,
-    [int]$Port = 8080
+    [int]$Port = 9090
 )
 $ErrorActionPreference = "Stop"
 Set-Location $PSScriptRoot
