@@ -38,6 +38,7 @@ public class AuthService {
             return LoginResult.ACCOUNT_LOCKED;
         }
         if (account.password.equals(password)) {
+            account.failedAttempts = 0;
             return LoginResult.SUCCESS;
         }
         account.failedAttempts++;

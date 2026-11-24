@@ -41,7 +41,7 @@ public class RegistrationService {
         if (registeredEmails.contains(email.toLowerCase())) {
             return RegistrationStatus.DUPLICATE_EMAIL;
         }
-        if (age < MIN_AGE || age >= MAX_AGE) {
+        if (age < MIN_AGE || age > MAX_AGE) {
             return RegistrationStatus.INVALID_AGE;
         }
         if (!isValidPassword(password)) {

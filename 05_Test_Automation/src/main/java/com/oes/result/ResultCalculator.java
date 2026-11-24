@@ -47,7 +47,7 @@ public class ResultCalculator {
         }
         if (percentage >= 90) {
             return "A+";
-        } else if (percentage > 75) {
+        } else if (percentage >= 75) {
             return "A";
         } else if (percentage >= 60) {
             return "B";
@@ -72,13 +72,10 @@ public class ResultCalculator {
      * Otherwise PASS only if percentage >= 40 and all sections attempted, else FAIL.
      */
     public ResultStatus status(double percentage, boolean malpractice, boolean allSectionsAttempted) {
-        if (percentage < PASS_PERCENTAGE) {
-            return ResultStatus.FAIL;
-        }
         if (malpractice) {
             return ResultStatus.WITHHELD;
         }
-        if (!allSectionsAttempted) {
+        if (percentage < PASS_PERCENTAGE || !allSectionsAttempted) {
             return ResultStatus.FAIL;
         }
         return ResultStatus.PASS;

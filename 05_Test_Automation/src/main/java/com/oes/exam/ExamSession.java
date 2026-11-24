@@ -43,7 +43,7 @@ public class ExamSession {
 
     public void answer(int questionId, int optionIndex) {
         refreshState();
-        if (state == ExamState.NOT_STARTED || state == ExamState.TIMED_OUT) {
+        if (state != ExamState.IN_PROGRESS) {
             throw new IllegalStateException("Cannot answer when exam is " + state);
         }
         Question question = findQuestion(questionId);
