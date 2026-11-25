@@ -3,7 +3,7 @@
 | Field | Value |
 |-------|-------|
 | Cycle | 2 (retesting of fixed defects + full regression) |
-| Build | Commit `0632372` — "Fix DEF-001 to DEF-005 in application code" |
+| Build | Commit `7333127` — "Fix DEF-001 to DEF-005 in application code" |
 | Executed on | 24-Nov-2026 |
 | Environment | Windows 11, Oracle JDK 21.0.11, JUnit 5 (Platform 1.11.4) |
 | Execution method | Automated — `05_Test_Automation/run_tests.ps1` |

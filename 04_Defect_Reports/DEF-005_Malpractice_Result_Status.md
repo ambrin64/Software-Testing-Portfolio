@@ -42,7 +42,7 @@ every column of the decision table needs to be tested, including the "don't care
 | Field | Value |
 |-------|-------|
 | Fix | `ResultCalculator.status()` now checks the malpractice flag first, then percentage and section coverage. |
-| Fixed in | Commit `0632372` |
+| Fixed in | Commit `7333127` |
 | Retested with | TC_RES_DT_07, TC_RES_DT_08 (plus regression TC_RES_DT_01–08) |
 | Retest result | ✅ PASS in Cycle 2 ([log](../03_Test_Execution/Test_Execution_Log_Cycle2.md)) |
 | Final status | Closed |

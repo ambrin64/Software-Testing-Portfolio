@@ -39,7 +39,7 @@ Students scoring exactly 75 % receive a lower grade, which directly affects thei
 | Field | Value |
 |-------|-------|
 | Fix | `ResultCalculator.grade()` used `percentage > 75`; changed to `percentage >= 75`. |
-| Fixed in | Commit `0632372` |
+| Fixed in | Commit `7333127` |
 | Retested with | TC_GRD_BVA_08 (plus regression TC_GRD_BVA_01–12) |
 | Retest result | ✅ PASS in Cycle 2 ([log](../03_Test_Execution/Test_Execution_Log_Cycle2.md)) |
 | Final status | Closed |

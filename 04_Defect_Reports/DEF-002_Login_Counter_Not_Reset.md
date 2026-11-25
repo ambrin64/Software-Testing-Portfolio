@@ -47,7 +47,7 @@ success state exposes it, which is why state transition testing found it.
 | Field | Value |
 |-------|-------|
 | Fix | `AuthService.login()` now sets `failedAttempts = 0` on a successful login. |
-| Fixed in | Commit `0632372` |
+| Fixed in | Commit `7333127` |
 | Retested with | TC_LGN_ST_05, TC_LGN_ST_06 (plus regression TC_LGN_ST_01–08) |
 | Retest result | ✅ PASS in Cycle 2 ([log](../03_Test_Execution/Test_Execution_Log_Cycle2.md)) |
 | Final status | Closed |

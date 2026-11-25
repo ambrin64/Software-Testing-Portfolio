@@ -44,7 +44,7 @@ this test case.
 | Field | Value |
 |-------|-------|
 | Fix | `ExamSession.answer()` now accepts answers only in the `IN_PROGRESS` state (`state != IN_PROGRESS` → exception). |
-| Fixed in | Commit `0632372` |
+| Fixed in | Commit `7333127` |
 | Retested with | TC_EXM_ST_06 (plus regression TC_EXM_ST_01–12) |
 | Retest result | ✅ PASS in Cycle 2 ([log](../03_Test_Execution/Test_Execution_Log_Cycle2.md)) |
 | Final status | Closed |

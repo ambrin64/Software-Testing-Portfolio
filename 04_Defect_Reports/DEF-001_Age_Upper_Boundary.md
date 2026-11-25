@@ -40,7 +40,7 @@ Equivalence partitioning with a mid-range value (e.g. 35) would **not** have fou
 | Field | Value |
 |-------|-------|
 | Fix | `RegistrationService.register()` used `age >= MAX_AGE`; changed to `age > MAX_AGE` so 60 is inclusive. |
-| Fixed in | Commit `0632372` |
+| Fixed in | Commit `7333127` |
 | Retested with | TC_REG_BVA_05 (plus regression TC_REG_BVA_01–06) |
 | Retest result | ✅ PASS in Cycle 2 ([log](../03_Test_Execution/Test_Execution_Log_Cycle2.md)) |
 | Final status | Closed |

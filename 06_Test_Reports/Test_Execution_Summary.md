@@ -6,7 +6,7 @@
 | Project | Online Examination System (OES) |
 | Test plan reference | [TP-OES-01](../01_Test_Plan/Test_Plan.md) |
 | Test period | Week 1 – Week 4 |
-| Final build tested | Commit `0632372` |
+| Final build tested | Commit `7333127` |
 
 ## 1. Summary
 
