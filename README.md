@@ -48,9 +48,31 @@ business logic is included in [`05_Test_Automation/src/main`](05_Test_Automation
 so that every test case in this portfolio is **actually executed** against real code.
 A **web front end** (register → sign in → timed exam → result) runs on top of the same tested classes.
 
-![Web UI: exam screen](07_Screenshots/09_Web_Exam.png)
+### 3.2 Run the web application
 
-### 3.2 Modules and functionalities tested
+> **Note:** the app runs on your own computer. The link below works only **after** you start the
+> server with the command in step 1; it is not a public website.
+
+1. Open a terminal (PowerShell) and start the server. Requires JDK 17 or newer.
+   ```powershell
+   cd 05_Test_Automation
+   .\run_tests.ps1 -Web
+   ```
+2. Open **http://localhost:9090/** in your browser. It usually opens on its own.
+3. Sign in with the demo account **`demo@oes.edu`** / **`Exam2026`**, or register a new student.
+4. Press **Ctrl + C** in the terminal to stop the server.
+
+| Option | Command |
+|--------|---------|
+| 1-minute exam (to show the automatic time-out) | `.\run_tests.ps1 -Web -ExamSeconds 60` |
+| Use a different port if 9090 is busy | `.\run_tests.ps1 -Web -Port 9091` |
+| Git Bash / Linux / macOS | `./run_tests.sh --web` |
+
+| Sign in | Exam | Result |
+|:---:|:---:|:---:|
+| ![Sign in](07_Screenshots/06_Web_SignIn.png) | ![Exam](07_Screenshots/09_Web_Exam.png) | ![Result](07_Screenshots/10_Web_Result.png) |
+
+### 3.3 Modules and functionalities tested
 
 | Module | ID | Functionalities tested | Technique(s) applied |
 |--------|----|------------------------|----------------------|
@@ -60,7 +82,7 @@ A **web front end** (register → sign in → timed exam → result) runs on top
 | Score Calculation | SCR | +4 per correct answer, −1 negative marking, floor at 0, percentage, section coverage | Equivalence Partitioning |
 | Grade & Result | GRD / RES | Percentage → grade bands; PASS / FAIL / WITHHELD decision | BVA, Decision Table |
 
-### 3.3 Tools & technologies
+### 3.4 Tools & technologies
 
 | Purpose | Tool |
 |---------|------|
